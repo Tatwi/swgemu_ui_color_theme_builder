@@ -1,0 +1,3 @@
+JSColor project is maintained by Jan Odvárko and released under the GNU Lesser General Public License. LGPL differs from GPL by allowing you to use JSColor even in non-(L)GPL applications. If you find JSColor useful and want to repay my work, a small donation would be appreciated.
+
+http://jscolor.com/

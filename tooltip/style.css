@@ -1,0 +1,51 @@
+* {margin:0; padding:0}#text{
+	z-index: 1002; 
+	margin:50px auto; 
+	width:500px;
+}
+
+.hotspot{
+	z-index: 1002; 
+	color:#000000; 
+	padding-bottom:1px; 
+	border-bottom:1px dotted #900; 
+	cursor:pointer; 
+	font-size: 12px;
+}
+
+#tt{
+	float: left;
+	z-index: 1002; 
+	position:absolute; 
+	display:block; 
+	background:#FDFFD1;
+	border-style:groove;
+	border-width: 3px;
+	border-color: #FF0000;
+	font-weight: bold;
+}
+
+#tttop{
+	z-index: 1002; 
+	display:block; 
+	height:5px; 
+	margin-left:5px; 
+	background:#FDFFD1;
+}
+
+#ttcont{
+	z-index: 1002; 
+	display:block; 
+	padding:2px 12px 3px 7px; 
+	margin-left:5px; 
+	background:#FDFFD1; 
+	color:#000000;
+}
+
+#ttbot{
+	z-index: 1002; 
+	display:block; 
+	height:5px; 
+	margin-left:5px; 
+	background:#FDFFD1;
+}

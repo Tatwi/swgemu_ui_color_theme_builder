@@ -1,0 +1,62 @@
+2016.06.14
+- Removed the preview section, as I am not going to build it.
+- Fixed some div hieghts in the stylesheet for compatibility with Firefox 47.
+
+13.01.13
+- theme_builder.js Line 119 - Changed (i=="120") to (i=224"), so that the name and "not color" values would print out in the right spot aphabetically. I somehow overlooked that all this time... :)
+- theme_builder.html - Added description for the textMagic element.
+- Added Alpha Blue preloaded theme.
+
+13.01.07
+- Added new default theme, Midnight Blue.
+- Cleaned up the drop down menu html by removing an unused class.
+- Added descriptions in the tooltips for all the values I could determine (which took several hours of effort).
+- Added a close button to color swath selector pop up by adding {pickerClosable:true} to all the class="color" tags in theme_builder.html.
+- Eliminated redundant theme loading function called themeLoader(form)
+	- theme_builder.js Line 17 - Changed function templateLoader(theme) to function templateLoader(theme, preLTrue, userLoadedTheme) so that it can accept the data sent to it from the Input Variables window to load a theme.
+	- templateLoader now checks to see if a preloaded theme is being loaded or if the user is inputing one. 
+	- cleaned up the the code that changes the color selector values, which was required to accomodate the close button above (and it's four times more effecient this way).
+- Made changes to toop tips
+	- tooltip/script.js - Changes to prevent the tooltips from going off the viewable area of the screen. Noted in the file comments.
+- tooltip/style.css - Changed background, text, and border color. Made formatting consistent with my style.
+	- theme_builder.css - input: hover now has a 3px red border to match tool tips and make it easier to tell which value one is looking at.
+- Created a significantly better help section at the bottom of the page.
+- Reduced the file size of the "preview" images by 10 times.
+- Declared the tool be GNU Lesser General Public Licensed, the same as the JSColor tool that it is based upon.
+- Validated fine as XHTML 1.0 Transitional.
+- Tested in Opera 12.12, Firefox 17.0.1, Google Chrome 23.0.1271.97 m, Internet Explorer 9.0.8112.16421.
+
+13.01.04
+- Completely changed the layout to show all colors at once, making it easier to compare them.
+- Moved field names into the tooltips. Still need to write descriptions for them.
+- Added a drop down menu to select 1 of 5 preloaded color themes. Easy to add more later.
+- Started work on the preview feature, with the picture bar at the top.
+- Validated fine as XHTML 1.0 Transitional.
+- Tested in Opera 12.12, Firefox 17.0.1, Google Chrome 23.0.1271.97 m, Internet Explorer 9.0.8112.16421.
+	- Noted that Firefox is laggy, where the other browsers are not laggy at all.
+
+
+
+13.01.03b
+- Changed doctype and encoding. 
+- Fixed issues casued by using < and > instead of &#60; and &#60; in the tooltip text.
+- Firefox / Chrome fix:
+	- Issue: Was not outputting data to the text area.
+	- theme_builder.js Line 112 - Changed .innerHTML to .value
+	- theme_builder.js Line 112 - Changed .innerHTML to .value
+- Firefox fix:
+	- Issue: Was not clearing fields on page refresh.
+	- theme_builder.js Line 11 - Added document.getElementById('myTheme').value = "";
+	- theme_builder.js Line 12 - Added document.getElementById('themeSaver').value = "";
+	- theme_builder.js Line 13 - Added document.getElementById('SLIPPERS').value = ""; 
+- theme_builder.html Line 447 - added id="SLIPPERS"
+- Validated fine as XHTML 1.0 Transitional.
+- Tested in Opera 12.12, Firefox 17.0.1, Google Chrome 23.0.1271.97 m, Internet Explorer 9.0.8112.16421.
+- Known Issue:
+	- Internet Explorer 9 does not respect the \n line breaks when formating the code to copy into the game file.
+	- Stance: I don't care. Please use a real web browser with this tool if this bothers you. Personally, I have used Opera since 2006 and it works great for me!
+
+
+13.01.03a
+- First release version.
+- Validated fine as HTML5.
