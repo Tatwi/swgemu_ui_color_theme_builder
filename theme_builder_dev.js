@@ -181,6 +181,10 @@ function toggle(it) {
 
 // Convert a default SWG xml color palette into variables that can be used with this tool.
 function parsePalette(palette){
+	// Remove white space and tabs
+	palette = palette.trim();
+	palette = palette.replace(/\t/g, "");
+	
 	// Make comma separated
 	palette = palette.replace("<Palette", "");
 	palette = palette.replace("/>", "");
@@ -214,6 +218,11 @@ function parsePalette(palette){
 
 function processXML(vars){
 	var output = parsePalette(vars)
+	
+	// Load theme into editor
+	templateLoader('null', 'no', output);
+	
+	// Output theme to Save Variable box
 	document.getElementById('themeSaver').value = output;
 }
 
