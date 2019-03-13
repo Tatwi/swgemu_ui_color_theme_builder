@@ -263,7 +263,7 @@
 	<!-- Code Output -->
 	<div class="yourTheme">
 		<h3>Your Theme:</h3>
-		<textarea name="myTheme" id="myTheme" rows="12" cols="10" style="width: 280px;"></textarea>
+		<textarea name="myTheme" id="myTheme" rows="24" cols="10" style="width: 480px;"></textarea>
 	</div>
 
 	<div class="saveTheme">
@@ -284,6 +284,18 @@
 	</div>
 </form>
 
+<!-- Parse a SWG palette into builder variables -->	
+<form id="frm2" action="">
+	<div class="parseXML">
+		<h3>Convert SWG Palette to Variables:</h3>
+		<textarea name="xmlLoad" id="xmlLoad" rows="20" cols="10" style="width: 300px;"></textarea>
+		<!-- Load Variables into the Script -->
+		<br /><input type="button" value="Parse XML" class="button" onclick="processXML(form.elements['xmlLoad'].value);" /> <input type="button" value="Clear XML" class="button" onclick="clearField('xmlLoad');" /> 
+		<br /><br />
+		<span class="hotspot" onmouseover="tooltip.show('Use this box to convert the XML of a Star Wars Galaxies palette into the variables that are used with this tool.');" onmouseout="tooltip.hide();">What is this?</span>
+	</div>
+</form>
+
 
 
 <!-- Guide Area -->
@@ -297,7 +309,7 @@
 	<tr>
 		<td>
 			<p>
-			<i>Note: For some reason the tool works slowly in Firefox, yet blazingly fast in Opera, Chrome, and even Internet Explorer. Personally, I use Opera. - Tatwi</i>
+			<i>Note: The tool seems work fine in Google Chrome now!</i>
 			</p>
 			<br />
 			<p>
@@ -352,7 +364,7 @@
 	<br />
 	<br />
 	<div style="text-align: center; font-style: italic; font-size: 10px;">
-		<a href="http://www.tpot.ca" >Created by R. Bassett Jr. 2013</a>
+		<a href="http://www.semi-nerdly.ca" >Created by R. Bassett Jr. 2019</a>
 		<br />This tool is <a href="http://www.gnu.org/copyleft/lesser.html">LGPL</a> licensed, so it's free to use everywhere, even in commercial applications. 		
 		</div>
 </div>

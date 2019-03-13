@@ -153,29 +153,35 @@ td{
 
 .yourTheme{
 	position: absolute;
-	top: 780px;
-	left: 10px;
-	width: 280px;
+	top: 700px;
+	left: 530px;
+	width: 480px;
 	z-index: 1001;	
 }
 
 .saveTheme{
 	position: absolute;
-	top: 780px;
-	left: 360px;	
+	top: 930px;
+	left: 10px;	
 }
 
 .loadTheme{
 	position: absolute;
-	top: 780px;
-	left: 580px;	
+	top: 700px;
+	left: 10px;	
+}
+
+.parseXML{
+	position: absolute;
+	top: 700px;
+	left: 200px;	
 }
 
 /* Help Area */
 
 .guide{
 	position: relative; 
-	top: 1020px; 
+	top: 1120px; 
 	left: 40px; 
 	width: 940px;
 	padding: 4px;

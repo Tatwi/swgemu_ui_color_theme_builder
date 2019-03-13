@@ -179,6 +179,44 @@ function toggle(it) {
     {it.width = 60;}
 }
 
+// Convert a default SWG xml color palette into variables that can be used with this tool.
+function parsePalette(palette){
+	// Make comma separated
+	palette = palette.replace("<Palette", "");
+	palette = palette.replace("/>", "");
+	palette = palette.replace(/='#/g, ",");
+	palette = palette.replace("='", ",");
+	palette = palette.replace(/'/g, ",");
+	
+	// Get palette name
+	var namePos = palette.search("Name,");
+	var palName = palette.slice(namePos);
+    var nameEndPos = palette.search("notcolor_ZoneAsteroid1");
+	palName = palette.substring(namePos, nameEndPos);
+	
+	// Remove palette name
+	palette = palette.replace(palName, "");
+	
+	// Remove unused values
+	palette = palette.replace(/^.*notcolor.*$/mg, "");
+	
+	// Put palette name back at the start
+	var retValue = palName + palette;
+ 
+ 	// Remove new lines
+    retValue = retValue.replace(/\n/g, "");
+    
+    // Remove trailing comma
+    retValue = retValue.replace(/,\s*$/, "");
+	
+	return retValue;
+}
 
+function processXML(vars){
+	var output = parsePalette(vars)
+	document.getElementById('themeSaver').value = output;
+}
 
-
+function clearField(field) {
+    document.getElementById(field).value = "";
+}
