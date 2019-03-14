@@ -15,7 +15,7 @@
 		You are welcome to use and modify and redistribute this tool, per the applicable licences, so long as the credits remain. 
 	-->
 </head>
-<body onload="templateLoader('preLoadTheme0', 'yes', 'null')">
+<body onload="startUp()">
 
 <form id="frm1" action="">
 	<!-- Heading Section -->
@@ -243,17 +243,7 @@
 
 	<!-- Select a Template -->
 	<div class="templates">
-		<select name="menu1" onchange="templateLoader(this.options[this.selectedIndex].value, 'yes');">
-				<option selected="selected" value="">Preloaded Theme Templates</option>
-				<option value="preLoadTheme0" id="preLoadTheme0">Default Theme [Midnight Blue] - By Tatwi</option>
-				<option value="preLoadTheme1" id="preLoadTheme1">Forest Moon - By Tatwi</option>
-				<option value="preLoadTheme2" id="preLoadTheme2">Testing - All Grey [A8A8A8]</option>
-				<option value="preLoadTheme3" id="preLoadTheme3">Darjani Greenby Uli</option>
-				<option value="preLoadTheme4" id="preLoadTheme4">Force Jedi</option>
-				<option value="preLoadTheme5" id="preLoadTheme5">Nova Trooper by Caveman</option>
-				<option value="preLoadTheme6" id="preLoadTheme6">Alpha Blue</option>
-				<option value="preLoadTheme7" id="preLoadTheme7">Protean</option>
-		</select>
+		<select name="themeMenu" id="themeMenu" onchange="templateLoader(preloadedThemes[this.selectedIndex]);"></select>
 	</div>
 	
 	<!-- Build Button-->
@@ -279,7 +269,7 @@
 		<h3>Load Variables:</h3>
 		<textarea name="userLoad" id="userLoad" rows="8" cols="10" style="width: 160px;"></textarea>
 		<!-- Load Variables into the Script -->
-		<br /><input type="button" value="Load" class="button" onclick="templateLoader('null', 'no', form.elements['userLoad'].value);" />
+		<br /><input type="button" value="Load" class="button" onclick="templateLoader(form.elements['userLoad'].value);" />
 		<br /><br />
 		<span class="hotspot" onmouseover="tooltip.show('Use this box to load a color theme you saved in the past. To save the variables, simply press the button to create your theme code, then click in the &#60;b&#62;Save Variables:&#60;/b&#62; box above, select all the text, then copy and paste it into a text file on your computer.');" onmouseout="tooltip.hide();">What is this?</span>
 	</div>
@@ -288,7 +278,7 @@
 <!-- Parse a SWG palette into builder variables -->	
 <form id="frm2" action="">
 	<div class="parseXML">
-		<h3>Convert SWG Palette to Variables:</h3>
+		<h3>Load SWG Palette XML Directly:</h3>
 		<textarea name="xmlLoad" id="xmlLoad" rows="20" cols="10" style="width: 300px;"></textarea>
 		<!-- Load Variables into the Script -->
 		<br /><input type="button" value="Parse XML" class="button" onclick="processXML(form.elements['xmlLoad'].value);" /> <input type="button" value="Clear XML" class="button" onclick="clearField('xmlLoad');" /> 
